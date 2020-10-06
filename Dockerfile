@@ -9,7 +9,7 @@ COPY DocPath_License_File.lic /usr/local/docpath/Licenses/
 COPY run.sh /usr/local/bin/
 WORKDIR /
 RUN rm -rf /required_files
-EXPOSE 1790
+EXPOSE 8086
 
 ENTRYPOINT ["/usr/local/bin/run.sh"]
 
