@@ -28,7 +28,7 @@ Now we are going to build the container by executing the following sequence in t
 
 Run the container once it has been built, use the following sequence:
 
-`docker run --name mergeservice --hostname <hostname_container> --detach -p 8086:8086 -v /home/mainuser/mergeservicesfiles:/usr/local/docpath/mergeservicepack/mergeservice/Resources docpath/mergeservice`
+`docker run --name mergeservice --hostname <hostname_container> --detach -p 8086:8086 -v $RESOURCESDIR:/usr/local/docpath/mergeservicepack/mergeservice/Resources docpath/mergeservice`
 
 The used parameters are:
 - --name: this parameter indicates the name of the container, in this case dge.
@@ -36,3 +36,10 @@ The used parameters are:
 - --detach: this parameter indicates that no messages are displayed in the execution console, silent mode.
 - -p 8086:8086: this parameter indicates the port of both host machine and dge.
 - docpath/mergeservice: this is the name assigned previously while building the container.
+
+Replace:
+- $RESOURCESDIR: Resources folder in the host what will be linked with the specified folder in the container.
+
+Example:
+
+`docker run --name mergeservice --hostname mergeservice --detach -p 8086:8086 -v /home/mainuser/mergeservicesresources:/usr/local/docpath/mergeservicepack/mergeservice/Resources docpath/mergeservice` 
