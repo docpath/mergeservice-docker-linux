@@ -2,7 +2,7 @@
 
 This is a complete example about how to deploy DocPath ® DocPath ® MergeService 2 in Linux using Docker. The example must be completed with the following files in the same directory as the repositorized files:
 
-- mergeservicepack-2.x.y.z: DocPath ® ResourceBox 2 Installer.
+- mergeservicepack-2.x.y.z: DocPath ® MergeService 2 Installer.
 - DocPath License File.lic: License file.
  
 ## Steps 
